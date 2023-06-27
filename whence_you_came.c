@@ -56,9 +56,6 @@ static void register_buff(yed_event *event) {
         free(tree_it_val(lookup));
     }
 
-    LOG_FN_ENTER();
-    yed_log("%p -> %s", ys->active_frame, name);
-    LOG_EXIT();
     tree_insert(map, event->frame, strdup(name));
 }
 
